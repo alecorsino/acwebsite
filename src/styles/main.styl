@@ -1,9 +1,10 @@
+@import 'skeleton/normalize'
+@import 'skeleton/skeleton_custom'
+
 @import fonts
 @import about
 @import pictures
 @import 'nib'
-@import 'skeleton/normalize'
-@import 'skeleton/skeleton_custom'
 
 border-radius()
   border-radius: arguments
@@ -11,3 +12,8 @@ border-radius()
 body
   font-family: 'Josefin Sans', sans-serif;
   background: #FFFFFF
+
+//Skeleton hack to display empty divs at its set width
+.column::before,
+.columns::before
+   content: "\200B";
