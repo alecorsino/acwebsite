@@ -15,7 +15,7 @@ module.exports = {
       reasons: true
   },
   entry: {
-    index: './src/index.js',
+    index: './src/js/index.js',
     about: './src/js/about.js'
 
   },

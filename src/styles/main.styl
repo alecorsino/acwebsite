@@ -8,21 +8,15 @@
 @import pictures
 @import 'nib'
 
-border-radius()
-  border-radius: arguments
-
 body
   font-family: 'Josefin Sans', sans-serif;
   background: #FFFFFF
-
-//Skeleton hack to display empty divs at its set width
-.column::before,
-.columns::before
-   content: "\200B"
 
 .banner
   text-align: center
   img
    width 15em
   +screen-min($tablet)
-    background: #AAAA00
+    background: #00AAAA
+  +screen-min($screen)
+    background: #AA00AA
