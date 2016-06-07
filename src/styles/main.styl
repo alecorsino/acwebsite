@@ -1,6 +1,8 @@
 @import 'skeleton/normalize'
 @import 'skeleton/skeleton_custom'
 
+@import vars
+@import mixins
 @import fonts
 @import about
 @import pictures
@@ -16,4 +18,11 @@ body
 //Skeleton hack to display empty divs at its set width
 .column::before,
 .columns::before
-   content: "\200B";
+   content: "\200B"
+
+.banner
+  text-align: center
+  img
+   width 15em
+  +screen-min($tablet)
+    background: #AAAA00
