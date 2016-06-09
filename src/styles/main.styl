@@ -9,7 +9,7 @@
 @import 'nib'
 
 body
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif
   background: #FFFFFF
 
 .banner
@@ -17,6 +17,24 @@ body
   img
    width 15em
   +screen-min($tablet)
-    // background: #00AAAA
+    img
+     width 18em
   +screen-min($screen)
-    // background: #AA00AA
+    img
+     width 20em
+
+header
+  text-align: center
+  +screen-min($tablet)
+    margin-top: 1em !important
+    margin-bottom: 1em !important
+  +screen-min($screen)
+    margin-top: 1em !important
+    margin-bottom: 1em !important
+
+footer
+  background-color: #efefef
+  text-align: center
+
+main
+  min-height: 100%
