@@ -1,18 +1,8 @@
-/*
-*
-* Use Webpack's require.context (preffered way).
-* Also to add a new HTML page use require('path/to/file.html')
-* This will trigger Webpack to move files to your build dir
-*
-*/
+// var jq = require('jquery');
 
-/*
-*  Will process all HTML files and assets referenced inside
-*  like styles and images. This will create hashed file name of assets.
-*/
-// require.context("..", true, /^\.\/.*\.html$/);
+$(function(){
 
-
-
-var logger = new (require('./util/Logger'))();
-logger.debug('Webpack rules...');
+  var logger = new (require('./util/Logger'))();
+  logger.debug('Page ready!');
+  
+});

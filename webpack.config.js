@@ -7,7 +7,7 @@ var path = require('path');
 console.log(__dirname);
 module.exports = {
   debug: true,
-  devtool: '#source-map',
+  devtool: 'source-map',
   stats: {
       // Configure the console output
       progress:true,
@@ -31,6 +31,9 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.CommonsChunkPlugin('scripts/common.js'),
+    new webpack.ProvidePlugin({
+      $: "jquery"
+    }),
     new BrowserSyncPlugin({
       server: 'www',
       open: true,
@@ -48,7 +51,6 @@ module.exports = {
       inject:true
     })
   ],
-
   module: {
     loaders: [
       { test: /\.(jpe?g|png|gif|svg)$/,
@@ -59,8 +61,8 @@ module.exports = {
       { test: /\.styl$/,
         loaders: [ 'file?name=[path][hash].css&context=./src',
                   'extract',
-                  'css-loader?context=./src',
-                  'stylus-loader'
+                  'css-loader?sourceMap&context=./src',
+                  'stylus-loader?sourceMap'
                                   ]
       },
       { test: /\.hbs$/,
