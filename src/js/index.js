@@ -10,7 +10,7 @@
 *  Will process all HTML files and assets referenced inside
 *  like styles and images. This will create hashed file name of assets.
 */
-require.context("..", true, /^\.\/.*\.html$/);
+// require.context("..", true, /^\.\/.*\.html$/);
 
 
 

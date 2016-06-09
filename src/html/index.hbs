@@ -7,8 +7,8 @@
         <meta name="author" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="styles/main.styl" media="screen" title="no title" charset="utf-8">
-        <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <link rel="stylesheet" href="../styles/main.styl" media="screen" title="no title" charset="utf-8">
+        <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     </head>
     <body>
         <div class="container">
@@ -17,7 +17,7 @@
                 </div>
                 <div class="one-third column">
                     <div class="banner">
-                        <img src="assets/img/ac-banner.svg" alt=""/>
+                        <img src="../assets/img/ac-banner.svg" alt=""/>
                     </div>
                 </div>
                 <div class="one-third column">
@@ -25,7 +25,8 @@
             </div>
             <div class="row">
                 <div class="six columns">
-                    <div class="pic-holder"></div>
+                    <div class="pic-holder pic-carmel">
+                    </div>
                 </div>
                 <div class="six columns">
                     <div class="pic-holder"></div>
@@ -33,6 +34,7 @@
             </div>
         </div>
 
+        {{> partials/footer}}
         <script src="scripts/common.js" charset="utf-8"></script>
         <script src="scripts/index.js" charset="utf-8"></script>
     </body>

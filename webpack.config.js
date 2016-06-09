@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var path = require('path');
 
@@ -35,6 +36,16 @@ module.exports = {
       open: true,
       logFileChanges: true
       // plugins: ['bs-fullscreen-message'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/html/index.hbs',
+      inject:false
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'about.html',
+      template: 'src/html/about.hbs',
+      inject:true
     })
   ],
 
@@ -48,14 +59,19 @@ module.exports = {
       { test: /\.styl$/,
         loaders: [ 'file?name=[path][hash].css&context=./src',
                   'extract',
-                  'css-loader',
+                  'css-loader?context=./src',
                   'stylus-loader'
                                   ]
+      },
+      { test: /\.hbs$/,
+        loaders:[ 'handlebars',
+                  'extract',
+                  'html?attrs=img:src link:href&root=/']
       },
       { test: /\.html$/,
         loaders: [ 'file?name=[path][name].[ext]&context=./src',
                    'extract',
-                  'html?attrs=img:src link:href&root=/'
+                   'html?attrs=img:src link:href&root=/'
                  ]
       }
     ]
