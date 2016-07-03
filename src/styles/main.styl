@@ -1,12 +1,13 @@
+@import 'vars_utils'
+
 @import 'skeleton/normalize'
 @import 'skeleton/skeleton_custom'
-
-@import vars
-@import mixins
-@import fonts
-@import about
-@import pictures
 @import 'nib'
+
+@import 'fonts'
+@import 'about'
+@import 'pictures'
+@import 'header'
 
 html
   font-size: 62.5%
@@ -17,26 +18,11 @@ body
   font-weight: 400
   background: #FFFFFF
 
-.banner
-  text-align: center
-  img
-   width 15em
-  +screen-min($tablet)
-    img
-     width 18em
-  +screen-min($screen)
-    img
-     width 20em
+// /* Skeleton containers */
+// +screen-min($screen)
+//   .container
+//     max-width: 1024px
 
-header
-  .column
-  text-align: center
-  +screen-min($tablet)
-    margin-top: 1em !important
-    margin-bottom: 1em !important
-  +screen-min($screen)
-    margin-top: 1em !important
-    margin-bottom: 1em !important
 
 footer
   background-color: #efefef

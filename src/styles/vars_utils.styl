@@ -1,0 +1,25 @@
+$mobile = 320px
+$tablet = 436px
+$screen = 769px
+
+$gutter = .4 //Represents percentage units
+
+/*
+* Mixins
+*/
+
+/*
+* Screen min-size media queries block.
+* This mixin can be added anywhere to target different breakpoints
+*/
+screen-min(minWidth)
+    @media screen and (min-width: minWidth)
+        {block}
+
+/*
+* Functions
+*/
+
+//Calculates size of columns based on a 12 columns layout
+column-size(colSpan)
+  100 * colSpan/12 - $gutter + $gutter * colSpan/12

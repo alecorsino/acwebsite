@@ -1,9 +1,5 @@
-@import vars
-
 /* Skeleton grid system
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-//$mobile = 400px
-//$tablet = 550px
 .container
   position: relative
   width: 100%
@@ -29,23 +25,23 @@
     width: 80%
   .column,
   .columns
-    margin-left: 4%
+    margin-left: ($gutter)%
   .column:first-child,
   .columns:first-child
     margin-left: 0
 
   .one.column,
-  .one.columns                    { width: 4.66666666667%; }
-  .two.columns                    { width: 13.3333333333%; }
-  .three.columns                  { width: 22%;            }
-  .four.columns                   { width: 30.6666666667%; }
-  .five.columns                   { width: 39.3333333333%; }
-  .six.columns                    { width: 48%;            }
-  .seven.columns                  { width: 56.6666666667%; }
-  .eight.columns                  { width: 65.3333333333%; }
-  .nine.columns                   { width: 74.0%;          }
-  .ten.columns                    { width: 82.6666666667%; }
-  .eleven.columns                 { width: 91.3333333333%; }
+  .one.columns                    { width: (column-size(1))% }
+  .two.columns                    { width: (column-size(2))% }
+  .three.columns                  { width: (column-size(3))%}
+  .four.columns                   { width: (column-size(4))% }
+  .five.columns                   { width: (column-size(5))% }
+  .six.columns                    { width: (column-size(6))% }
+  .seven.columns                  { width: (column-size(7))% }
+  .eight.columns                  { width: (column-size(8))%}
+  .nine.columns                   { width: (column-size(9))%}
+  .ten.columns                    { width: (column-size(10))% }
+  .eleven.columns                 { width: (column-size(11))% }
   .twelve.columns                 { width: 100%; margin-left: 0; }
 
   .one-third.column               { width: 30.6666666667%; }
