@@ -1,23 +1,21 @@
-.banner
-  text-align: center
-  img
-   width 15em
-  +screen-min($tablet)
-    img
-     width 18em
-  +screen-min($screen)
-    img
-     width 20em
+
+
 
 header
-  // margin-bottom: 1em !important
-  .column,
-  .columns
-    text-align: center
-    margin-left: 0 !important
-  +screen-min($tablet)
-    margin-top: 1em !important
-    margin-bottom: 1em !important
-  +screen-min($screen)
-    margin-top: 1em !important
-    margin-bottom: 1em !important
+  &.container
+    padding: 1.5em 0
+  section
+    // border: 1px solid
+  .banner
+    width: 80%
+    padding: 0 3em
+
+.header-links
+  float: right;
+  margin-right: 3em;
+  a
+    display: inline-block
+    color: rgb(130, 130, 130)
+    font-size: 3rem
+    text-decoration: none
+    vertical-align: middle;
