@@ -7,7 +7,7 @@ var path = require('path');
 console.log(__dirname);
 module.exports = {
   debug: true,
-  devtool: 'source-map',
+  // devtool: 'source-map',
   stats: {
       // Configure the console output
       progress:true,
@@ -28,6 +28,10 @@ module.exports = {
   },
 
   plugins: [
+    // Prod
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+      
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.CommonsChunkPlugin('scripts/common.js'),
@@ -46,8 +50,18 @@ module.exports = {
       inject:false
     }),
     new HtmlWebpackPlugin({
+      filename: 'home.html',
+      template: 'src/html/home.hbs',
+      inject:false
+    }),
+    new HtmlWebpackPlugin({
       filename: 'about.html',
       template: 'src/html/about.hbs',
+      inject:true
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'error.html',
+      template: 'src/html/error.hbs',
       inject:true
     })
   ],

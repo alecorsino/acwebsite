@@ -34,6 +34,7 @@
     "webpack-dev-middleware": "^1.6.1"
   },
   "devDependencies": {
+    "vivus": "^0.3.1",
     "imagesloaded": "^4.1.0",
     "jquery": "^3.0.0",
     "masonry-layout": "^4.1.0"
