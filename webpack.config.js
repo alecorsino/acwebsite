@@ -30,8 +30,8 @@ module.exports = {
   plugins: [
     // Prod
       new webpack.optimize.DedupePlugin(),
-      new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
-      
+      // new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.CommonsChunkPlugin('scripts/common.js'),
@@ -40,7 +40,7 @@ module.exports = {
     }),
     new BrowserSyncPlugin({
       server: 'www',
-      open: true,
+      open: false,
       logFileChanges: true
       // plugins: ['bs-fullscreen-message'],
     }),
@@ -71,11 +71,12 @@ module.exports = {
         loader: 'url-loader?limit=8192&name=[path][hash].[ext]&context=./src'  // inline base64 URLs for <=8k images, direct URLs for the rest
       },
 
-      // { test: /\.css$/, loader: 'style-loader!css-loader' },
+      { test: /\.css$/, loader: 'style-loader!css-loader' },
       { test: /\.styl$/,
         loaders: [ 'file?name=[path][hash].css&context=./src',
                   'extract',
                   'css-loader?sourceMap&context=./src',
+                  'postcss-loader',
                   'stylus-loader?sourceMap'
                                   ]
       },

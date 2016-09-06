@@ -1,6 +1,7 @@
 // var jq = require('jquery');
 
 $(function(){
+   require('animate.css/animate.css');
   // var logger = new (require('./util/Logger'))();
   // var masongrid = require('./masongrid');
 

@@ -25,6 +25,7 @@
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.19.0",
     "nib": "^1.1.0",
+    "postcss-loader": "^0.11.1",
     "strip-ansi": "^3.0.1",
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
@@ -34,10 +35,11 @@
     "webpack-dev-middleware": "^1.6.1"
   },
   "devDependencies": {
-    "vivus": "^0.3.1",
+    "animate.css": "^3.5.2",
     "imagesloaded": "^4.1.0",
     "jquery": "^3.0.0",
-    "masonry-layout": "^4.1.0"
+    "masonry-layout": "^4.1.0",
+    "vivus": "^0.3.1"
   },
   "keywords": [
     "Webpack",
