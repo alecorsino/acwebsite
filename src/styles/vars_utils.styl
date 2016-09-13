@@ -6,6 +6,18 @@ $screen = 769px
 
 $gutter = 0 //Unit represnt percentage
 
+/*
+* Mixins
+*/
+
+/*
+* Screen min-size media queries block.
+* This mixin can be added anywhere to target different breakpoints
+*/
+screen-min(minWidth)
+    @media screen and (min-width: minWidth)
+        {block}
+
 // ****** Functions and Mixins ********
 
 /* Calculates column size percentage  based on a 12 column layout*/

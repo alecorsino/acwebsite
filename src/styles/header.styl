@@ -11,11 +11,16 @@ header
   .banner
     position: absolute
     bottom: 0
+    +screen-min($mobile)
+      bottom: 3rem
+      left: 1.5rem
     padding: 0
     margin: 0
     img
       display: block
-      height: 4rem
+      height: 2rem
+      +screen-min($screen)
+        height: 4rem
       max-width: 100%
       max-height: 100%
 
@@ -24,8 +29,11 @@ header
   margin-right: 3em;
   a
     margin: 0 2rem
+    +screen-min($mobile)
+      margin-top: 2rem
     display: inline-block
     color: rgb(130, 130, 130)
-    font-size: 2.5rem
+    +screen-min($screen)
+      font-size: 2.5rem
     text-decoration: none
     vertical-align: middle;
