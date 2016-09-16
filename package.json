@@ -13,7 +13,7 @@
     "url": "https://github.com/alecorsino"
   },
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "browser-sync": "^2.12.8",
     "browser-sync-webpack-plugin": "^1.0.1",
     "bs-fullscreen-message": "^1.0.2",
@@ -34,7 +34,7 @@
     "webpack": "^1.13.0",
     "webpack-dev-middleware": "^1.6.1"
   },
-  "devDependencies": {
+  "dependencies": {
     "animate.css": "^3.5.2",
     "imagesloaded": "^4.1.0",
     "jquery": "^3.0.0",

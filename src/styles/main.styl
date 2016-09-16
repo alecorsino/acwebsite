@@ -14,20 +14,30 @@ html
 
 body
   // font-family: 'Josefin Sans', sans-serif
+  color: rgb(130, 130, 130)
   font-family: 'Raleway', sans-serif;
   font-size: 1.4rem
   font-weight: 400
   background: #FFFFFF
 
 footer
-  background-color: #efefef
+  margin: 2rem 0 !important
+  +screen-min($tablet)
+    margin: 5rem 0 !important
   text-align: center
-
+  .social
+    margin .7rem 0
+    span
+      margin: 0 .7rem
 main
   min-height: 100%
 
 h1   { font-size: 2.4rem; } /* =24px */
 
+a
+  text-decoration: none
+  color: inherit
+  
 .center
   text-align: center
 
