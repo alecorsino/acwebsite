@@ -8,6 +8,9 @@
 @import 'about'
 @import 'pictures'
 @import 'header'
+@import 'footer'
+@import 'index'
+@import 'contact'
 
 html
   font-size: 62.5%
@@ -20,15 +23,7 @@ body
   font-weight: 400
   background: #FFFFFF
 
-footer
-  margin: 2rem 0 !important
-  +screen-min($tablet)
-    margin: 5rem 0 !important
-  text-align: center
-  .social
-    margin .7rem 0
-    span
-      margin: 0 .7rem
+
 main
   min-height: 100%
 
@@ -37,28 +32,6 @@ h1   { font-size: 2.4rem; } /* =24px */
 a
   text-decoration: none
   color: inherit
-  
+
 .center
   text-align: center
-
-.index-screen
-  width: 30rem
-  height: 30rem
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto
-  text-align: center
-  img
-    animation:spin 13s ease-in-out infinite
-    // animation-delay: .5s
-  .tagline
-    font-size: 2.2rem
-    font-weight: 200
-    transform:scale(1,.72)
-    letter-spacing: 2px
-    margin: 1.5rem 0
-
-@keyframes spin { 100% { transform:rotate(360deg); } }

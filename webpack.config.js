@@ -16,8 +16,8 @@ module.exports = {
       reasons: true
   },
   entry: {
-    index: './src/js/index.js',
-    about: './src/js/about.js'
+    // about: './src/js/about.js',
+    index: './src/js/index.js'
 
   },
 
@@ -30,7 +30,7 @@ module.exports = {
   plugins: [
     // Prod
       new webpack.optimize.DedupePlugin(),
-      // new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+      new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
 
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
@@ -55,8 +55,8 @@ module.exports = {
       inject:false
     }),
     new HtmlWebpackPlugin({
-      filename: 'about.html',
-      template: 'src/html/about.hbs',
+      filename: 'contact.html',
+      template: 'src/html/contact.hbs',
       inject:true
     }),
     new HtmlWebpackPlugin({
@@ -83,12 +83,12 @@ module.exports = {
       { test: /\.hbs$/,
         loaders:[ 'handlebars',
                   'extract',
-                  'html?attrs=img:src link:href&root=/']
+                  'html?attrs=img:src link:href img:data-mfp-src&root=/']
       },
       { test: /\.html$/,
         loaders: [ 'file?name=[path][name].[ext]&context=./src',
                    'extract',
-                   'html?attrs=img:src link:href&root=/'
+                   'html?attrs=img:src link:href img:data-mfp-src&root=/'
                  ]
       }
     ]
