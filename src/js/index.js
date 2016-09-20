@@ -4,6 +4,7 @@ require('magnific-popup/dist/magnific-popup.css');
 var popup = require('magnific-popup/dist/jquery.magnific-popup.js');
 
 $('#index').hide();
+setImagesRows();
 
 function setImagesRows(){
   $('.pic-row').each(function(){
@@ -43,5 +44,5 @@ $(window).on('load',function () {
   setTimeout(function(){
     $('#loading').hide();
     $('#index').show();
-   }, 3000);
+  }, 2000);
 });
