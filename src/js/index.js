@@ -7,12 +7,15 @@ $('#index').hide();
 setImagesRows();
 
 function setImagesRows(){
+  var screenWidth = $(document).width();
+  screenWidth = (screenWidth < 1280)? screenWidth : 1280;
+
   $('.pic-row').each(function(){
     var ratios = 0;
     $(this).children().each(function(){
       ratios += getImgRatio($(this));
     });
-    var h= $(document).width()*0.93/ratios ;
+    var h= screenWidth * 0.93/ratios ;
     $(this).height(h);
   });
 };
