@@ -16,8 +16,8 @@ function setImagesRows(){
     $(this).find('img').each(function(){
       ratios += getImgRatio($(this));
     });
-    var h = screenWidth * 0.94/ratios ;
-    $(this).height(h);
+    var h = screenWidth * .93/ratios ;
+    $(this).height(h - imgGutter);
   });
 };
 
