@@ -2,6 +2,7 @@
 require('animate.css/animate.css');
 require('magnific-popup/dist/magnific-popup.css');
 var popup = require('magnific-popup/dist/jquery.magnific-popup.js');
+var imgGutter = 5; //match this value with $image-gutter Styles imgages gutter
 
 $('#index').hide();
 setImagesRows();
@@ -12,16 +13,16 @@ function setImagesRows(){
 
   $('.pic-row').each(function(){
     var ratios = 0;
-    $(this).children().each(function(){
+    $(this).find('img').each(function(){
       ratios += getImgRatio($(this));
     });
-    var h= screenWidth * 0.93/ratios ;
+    var h = screenWidth * 0.94/ratios ;
     $(this).height(h);
   });
 };
 
 function getImgRatio(e){
-  return e[0].naturalWidth / e[0].naturalHeight;
+  return (e[0].naturalWidth + imgGutter)/ (e[0].naturalHeight);
 };
 
 function enablePopUp() {
@@ -47,5 +48,5 @@ $(window).on('load',function () {
   setTimeout(function(){
     $('#loading').hide();
     $('#index').show();
-  }, 2000);
+  }, 1000);
 });

@@ -1,17 +1,36 @@
-#pic-section
+$image-gutter = 5px
+
+// #pic-section
+
 .pic-holder
-  // height: 600px
+  span
+    cursor: zoom-in
   img
-    display: inline-block; //block
+    display: inline-block;//block
     max-width: 100%
     max-height: 100%
     height: auto
+    margin-right: $image-gutter
+    opacity: 1;
+    transition: .2s ease-in-out;
+    &:hover
+      opacity: .3;
+
 
 .pic-row
   font-size: 0
   +screen-max($mobile-max)
     height: 100% !important
   letter-spacing: -1px
-  margin: 0
+  margin-bottom: $image-gutter
   padding: 0
   border: 0
+
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
