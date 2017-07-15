@@ -50,6 +50,11 @@ module.exports = {
       inject:false
     }),
     new HtmlWebpackPlugin({
+      filename: 'about.html',
+      template: 'src/html/about.hbs',
+      inject:false
+    }),
+    new HtmlWebpackPlugin({
       filename: 'contact.html',
       template: 'src/html/contact.hbs',
       inject:true
