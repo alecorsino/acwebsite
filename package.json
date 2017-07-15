@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "rm -rf www/*",
     "dev": "npm run clean && webpack --watch",
+    "prod": "npm run clean && webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
