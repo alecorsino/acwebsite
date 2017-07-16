@@ -1,15 +1,18 @@
 #about
   div
-    width: 60%
+    +screen-min($tablet)
+      width: 60%
     margin: 2em auto
   a
    color: darken($primary-color, 20%)
    font-weight: bold
 
   .list
-    width: 25%
-    margin-left: auto
+    margin-left: 25%
     margin-right: auto
+    +screen-min($tablet)
+      width: 25%
+      margin-left: auto
 
   ul
     text-align: initial
